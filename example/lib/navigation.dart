@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
           title: Text("Navigation Example"),
           actions: <Widget>[
             BackdropToggleButton(
-              icon: AnimatedIcons.list_view,
+              animatedIcon: AnimatedIcons.list_view,
             )
           ],
         ),

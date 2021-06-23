@@ -10,7 +10,7 @@ dependencies:
 
   # Add backdrop dependency here
   backdrop:
-    path: "../"
+    git: https://github.com/BBrown4/backdrop.git
 
 dev_dependencies:
   flutter_test:

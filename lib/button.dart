@@ -30,7 +30,10 @@ class BackdropToggleButton extends StatelessWidget {
   /// Animated icon that is used for the contained [AnimatedIcon].
   ///
   /// Defaults to [AnimatedIcons.close_menu].
-  final AnimatedIconData icon;
+  final AnimatedIconData animatedIcon;
+
+  /// Overrides the animated icon if desired
+  final Widget? overrideIcon;
 
   /// The animated icon's foreground color.
   ///
@@ -39,18 +42,20 @@ class BackdropToggleButton extends StatelessWidget {
 
   /// Creates an instance of [BackdropToggleButton].
   const BackdropToggleButton({
-    this.icon = AnimatedIcons.close_menu,
+    this.animatedIcon = AnimatedIcons.close_menu,
     this.color = Colors.white,
+    this.overrideIcon,
   });
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: AnimatedIcon(
-        icon: icon,
-        color: color,
-        progress: Backdrop.of(context).animationController.view,
-      ),
+      icon: overrideIcon ??
+          AnimatedIcon(
+            icon: animatedIcon,
+            color: color,
+            progress: Backdrop.of(context).animationController.view,
+          ),
       onPressed: () => Backdrop.of(context).fling(),
     );
   }

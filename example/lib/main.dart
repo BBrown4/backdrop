@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           title: Text("Backdrop Example"),
           actions: <Widget>[
             BackdropToggleButton(
-              icon: AnimatedIcons.list_view,
+              animatedIcon: AnimatedIcons.list_view,
             )
           ],
         ),

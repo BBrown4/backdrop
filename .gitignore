@@ -355,3 +355,4 @@ build/
 example/.dart_tool/
 example/android/.idea/
 example/ios/Flutter/flutter_export_environment.sh
+/.idea/runConfigurations.xml

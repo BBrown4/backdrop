@@ -28,8 +28,8 @@ class Backdrop extends InheritedWidget {
       : super(key: key, child: child);
 
   /// Provides access to the state from everywhere in the widget tree.
-  static BackdropScaffoldState of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<Backdrop>()!.data;
+  static BackdropScaffoldState? of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<Backdrop>()?.data;
 
   @override
   bool updateShouldNotify(Backdrop old) => true;
